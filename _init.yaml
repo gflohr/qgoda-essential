@@ -25,7 +25,7 @@ _node_dev_dependencies:
 title: Qgoda Seed Project with Essential Components
 exclude:
   - /package.json
-  - /package.lock.json
+  - /package-lock.json
   - /yarn.lock
   - /node_modules
 helpers:
@@ -35,4 +35,7 @@ defaults:
       - /
     values:
       lingua: en-us
+global:
+  styles: ['/assets/css/styles.css']
+  scripts: ['/assets/js/site.js']
 theme_repo: gflohr/qgoda-essential
