@@ -1,3 +1,25 @@
 body {
     font-family: Sans-Serif;
+    margin: 0;
+}
+
+header {
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    background-color: #d97319;
+    padding: 1rem;
+}
+
+.content {
+    width: 64rem;
+    margin: auto;
+}
+
+footer {
+    font-size: smaller;
+    text-align: center;
+    background-color: #d97319;
+    color: white;
+    padding: 0.5rem;
 }
