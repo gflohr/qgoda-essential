@@ -1,0 +1,38 @@
+# YAML description for the theme qgoda-essential.
+_exclude:
+  - /LICENSE
+  - /README.md
+_precious:
+  - '*.md'
+  - '*.markdown'
+  - '*.mkdn'
+_tasks:
+  - node
+ 
+# This gets merged into package.json.
+_package:
+  scripts:
+    prestart: 'npm install'
+    start: 'browser-sync start --server _site --files _timestamp'
+    test: 'echo "Error: no test specified"; exit 1'
+
+# Dev dependencies.
+_node_dev_dependencies:
+  # Development web server.
+  - browser-sync
+
+# The rest of the file is merged verbatim into _config.yaml.
+title: Qgoda Seed Project with Essential Components
+exclude:
+  - /package.json
+  - /package.lock.json
+  - /yarn.lock
+  - /node_modules
+helpers:
+  browser-sync: npm start
+defaults:
+  - files:
+      - /
+    values:
+      lingua: en-us
+theme_repo: gflohr/qgoda-essential
