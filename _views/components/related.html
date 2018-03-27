@@ -1,0 +1,12 @@
+[% USE q = Qgoda %]
+[% IF !threshold %][% threshold = 3 %][% END %]
+[% IF !count %][% count = 5 %][% END %]
+[% docs = q.related(threshold, type = 'post').splice(0, count - 1) %]
+[% IF docs.size %]
+  <h2 class="related-h">Related</h2>
+  <ul class="related-list">
+    [% FOREACH doc IN docs %]
+    <li><a href="[% doc.permalink %]">[% doc.title | html %]</a></li>
+    [% END %]
+  </ul>
+[% END %]
