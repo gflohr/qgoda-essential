@@ -178,6 +178,7 @@ ul.listing li .listing-body {
     flex: 1 6 30%;
     order: 3;
     margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 #main > aside h2:first-child {
