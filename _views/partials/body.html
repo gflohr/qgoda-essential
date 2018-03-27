@@ -1,7 +1,7 @@
 [% USE q = Qgoda %]
   <body>
     [% INCLUDE partials/body/header.html %]
-    <article class="content">
+    <article class="main">
       <div class="article-head">
         <h1 class="title">[% asset.title %]</h1>
         [% IF asset.subtitle %]<h2 class="subtitle">[% asset.subtitle | html %]</a></h2>[% END %]
@@ -19,7 +19,7 @@
         [% END %]
       </div>
 
-      [% asset.content %]
+      <div class="content">[% asset.content %]</div>
     </article>
     [% INCLUDE partials/body/footer.html %]
 
