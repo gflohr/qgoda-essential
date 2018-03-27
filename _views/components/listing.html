@@ -24,4 +24,31 @@
     </li>
   [% END %]
   </ul>
+
+  [% IF p.total_pages > 1 %]
+  [% SET page = 0 %]
+  <div><nav class="pagination" aria-label="Pagination">
+    <ul>
+      <li class="[% UNLESS p.previous_link %]disabled[% END %]">
+        <a href="[% p.previous_link %]">Previous</a>
+      </li>
+
+      [% FOREACH link IN p.links %]
+      <li class="[% IF page == p.page0 %] active[% END %]">
+        <a href="[% p.links.$page %]" tabindex="[% p.tabindices.$page %]">
+             [%- page = page + 1 -%]
+             [%- page -%]
+           </a>
+      </li>
+      [% END %]
+
+      <li class="[% UNLESS p.next_link %]disabled[% END %]">
+        <a href="[% p.next_link %]">Next</a>
+      </li>
+    </ul>
+    [% IF p.next_start %]
+      [% q.clone(location = p.next_location start = p.next_start) %]
+    [% END %]
+  </nav></div>
+  [% END %]
 [% END %]
