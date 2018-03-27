@@ -32,9 +32,17 @@ helpers:
   browser-sync: npm start
 defaults:
   - files:
-      - /
+      - "*.md"
     values:
       lingua: en-us
+      type: post
+      author: Guido Flohr
+      organization: cantanea EOOD
+  - files:
+      - index.md
+    values:
+      type: page
+      priority: -1
 global:
   styles: ['/assets/css/styles.css']
   scripts: ['/assets/js/site.js']

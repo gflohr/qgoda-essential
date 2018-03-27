@@ -1,6 +1,42 @@
 body {
-    font-family: Sans-Serif;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: justify;
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: normal;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.404;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 0.996rem;
+}
+
+h6 {
+    font-size: 0.8576rem;
+}
+
+a, a:visited {
+    color: #2b689c;
+    text-decoration: none;
 }
 
 header {
@@ -11,8 +47,121 @@ header {
     padding: 1rem;
 }
 
+header .logo a {
+    color: white;
+    text-decoration: none;
+}
+
+header .logo a:hover {
+    text-decoration: underline;
+}
+
+ul.listing {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.listing li .listing-body {
+    padding: 1rem;
+    border: 1px solid #cccccc;
+}
+
+.listing a {
+    text-decoration: none;
+}
+
+.listing a:hover {
+    text-decoration: underline;
+}
+
+.listing .read-more {
+    font-size: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+}
+
+.listing .read-more a {
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.listing .read-more a::after {
+    content: "\a0>>";
+}
+
+.listing .read-more a:hover {
+    color: #2b689c;
+}
+
+.author {
+    font-size: 75%;
+    font-style: italic;
+}
+
+.listing .excerpt {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.listing .title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.listing .subtitle {
+    margin-top: 0;
+}
+
+.listing .listing-footer {
+    background-color: #dddddd;
+    border: 1px solid #bbbbbb;
+    color: #888888;
+    border-top: none;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.article-subhead {
+    color: #888888;
+    font-style: italic;
+}
+
+.date {
+    float: left;
+}
+
+.author {
+    float: right;
+}
+
+.date {
+    font-size: 75%;
+    font-style: italic;
+}
+
+.date::before {
+    content: "\1F565";
+    font-style: normal;
+}
+
+.article-head .title {
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.article-head .subtitle {
+    margin: 0;
+    padding-top: 0.5rem;
+    font-size: 120%;
+}
+
 .content {
-    width: 64rem;
+    width: 50rem;
     margin: auto;
 }
 
