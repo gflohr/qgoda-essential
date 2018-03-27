@@ -1,22 +1,27 @@
 [% USE q = Qgoda %]
 [% posts = q.listPosts().sortBy('order') %]
-<ul class="listing">
-[% FOREACH post IN posts %]
-  <li>
-    <div class="listing-body">
-    <h3 class="title"><a href="[% post.permalink %]">[% post.title | html %]</a></h3>
-    [% IF post.subtitle %]<h5 class="subtitle"><a href="[% post.permalink %]">[% post.title | html %]</a></h5>[% END %]
-    <p class="excerpt">[% post.excerpt | html %]</p>
-    <button class="read-more"><a href="[% post.permalink %]">Read more</a></button>
-    </div>
-    <div class="listing-footer">
-      <span class="date">[% q.strftime('%B, %d %Y', post.date) %]</span>
-      &nbsp;
-      <span class="author">
-        [% post.author %]
-        [% IF post.organization %]- [% post.organization %][% END %]
-      </span>
-    </div>
-  </li>
+[% IF posts.size %]
+  [% p = q.paginate(start = asset.start, total = posts.size, per_page = 3) %]
+  <ul class="listing">
+  [% FOREACH post IN posts.splice(p.start, p.per_page) %]
+    <li>
+      <div class="listing-body">
+      <h3 class="title"><a href="[% post.permalink %]">[% post.title | html %]</a></h3>
+      [% IF post.subtitle %]<h5 class="subtitle"><a href="[% post.permalink %]">[% post.title | html %]</a></h5>[% END %]
+      <p class="excerpt">[% post.excerpt | html %]</p>
+      <form action="[% post.permalink %]" method="GET">
+          <button class="read-more"><span>Read more</span></button>
+      </form>
+      </div>
+      <div class="listing-footer">
+        <span class="date">[% q.strftime('%B, %d %Y', post.date) %]</span>
+        &nbsp;
+        <span class="author">
+          [% post.author %]
+          [% IF post.organization %]- [% post.organization %][% END %]
+        </span>
+      </div>
+    </li>
+  [% END %]
+  </ul>
 [% END %]
-</ul>

@@ -76,20 +76,23 @@ ul.listing li .listing-body {
 }
 
 .listing .read-more {
+    color: #2b689c;
+    cursor: pointer;
     font-size: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #2b689c; 
     border-radius: 5px;
     padding: 1rem;
+    background-color: white;
 }
 
 .listing .read-more a {
     font-weight: bold;
 }
 
-.listing .read-more a::after {
-    content: "\a0>>";
+.listing .read-more span::after {
+    content: "\a0\bb";
 }
 
 .listing .read-more a:hover {
