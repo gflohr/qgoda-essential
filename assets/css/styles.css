@@ -79,16 +79,13 @@ ul.listing li .listing-body {
     font-size: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    background-color: orange;
+    border: 1px solid #2b689c; 
     border-radius: 5px;
-    border: none;
     padding: 1rem;
 }
 
 .listing .read-more a {
-    color: white;
-    font-style: normal;
-    text-decoration: none;
+    font-weight: bold;
 }
 
 .listing .read-more a::after {
@@ -180,7 +177,11 @@ ul.listing li .listing-body {
 #main > aside {
     flex: 1 6 30%;
     order: 3;
-    margin-left: 2rem;
+    margin-left: 3rem;
+}
+
+#main > aside h2:first-child {
+    margin-top: 0;
 }
 
 #left {
