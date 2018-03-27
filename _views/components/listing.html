@@ -29,9 +29,11 @@
   [% SET page = 0 %]
   <div><nav class="pagination" aria-label="Pagination">
     <ul>
-      <li class="[% UNLESS p.previous_link %]disabled[% END %]">
-        <a href="[% p.previous_link %]">Previous</a>
-      </li>
+      [% IF p.previous_link %]
+      <li><a href="[% p.previous_link %]">Previous</a></li>
+      [% ELSE %]
+      <li class="disabled">Previous</li>
+      [% END %]
 
       [% FOREACH link IN p.links %]
       <li class="[% IF page == p.page0 %] active[% END %]">
@@ -42,9 +44,11 @@
       </li>
       [% END %]
 
-      <li class="[% UNLESS p.next_link %]disabled[% END %]">
-        <a href="[% p.next_link %]">Next</a>
-      </li>
+     [% IF p.next_link %]
+      <li><a href="[% p.next_link %]">Next</a></li>
+      [% ELSE %]
+      <li class="disabled">Next</li>
+      [% END %]
     </ul>
     [% IF p.next_start %]
       [% q.clone(location = p.next_location start = p.next_start) %]

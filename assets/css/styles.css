@@ -208,6 +208,33 @@ footer {
     padding: 0.5rem;
 }
 
+.pagination ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 1rem;
+}
+
+.pagination li {
+    list-style-type: none;
+    display: inline;
+    padding-left: 0.5rem;
+    padding-right: 0.1rem;
+    border-left: 1px solid #cccccc;
+}
+
+.pagination li:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+
+.pagination .disabled {
+    color: #cccccc;
+}
+
+.pagination .active {
+    font-weight: bold;
+}
+
 @media all and (max-width: 640px) {
     #main {
         flex-direction: column;
