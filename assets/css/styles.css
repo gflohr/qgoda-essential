@@ -45,6 +45,7 @@ header {
     color: white;
     background-color: #d97319;
     padding: 1rem;
+    margin-bottom: 5rem;
 }
 
 header .logo a {
@@ -152,7 +153,6 @@ ul.listing li .listing-body {
 
 .article-head .title {
     margin: 0;
-    margin-top: 5rem;
 }
 
 .article-head .subtitle {
@@ -161,9 +161,34 @@ ul.listing li .listing-body {
     font-size: 120%;
 }
 
-.main {
-    width: 50rem;
-    margin: auto;
+#main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#main > article {
+    flex: 3 1 50%;
+    order: 2;
+}
+
+#main > nav {
+    flex: 1 6 20%;
+    order: 1;
+}
+
+#main > aside {
+    flex: 1 6 30%;
+    order: 3;
+    margin-left: 2rem;
+}
+
+#left {
+    background-color: yellow;
+}
+
+#right {
+    background-color: yellow;
 }
 
 .content h2:first-child {
@@ -177,3 +202,14 @@ footer {
     color: white;
     padding: 0.5rem;
 }
+
+@media all and (max-width: 640px) {
+    #main {
+        flex-direction: column;
+    }
+
+    #main > article, #main > nav, #main > aside {
+        order: 0;
+    }
+}
+
