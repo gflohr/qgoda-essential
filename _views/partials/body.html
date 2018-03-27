@@ -26,14 +26,7 @@
       <nav></nav>
       <aside>
       [% IF 'post' == asset.type %]
-        [% docs = q.related(3, type = 'post').splice(0, 2) %]
-        [% IF docs.size %]
-        <h2>Related</h2>
-        <ul class="related">
-          [% FOREACH doc IN docs %]
-          <li><a href="[% doc.permalink %]">[% doc.title | html %]</a></li>
-          [% END %]
-        </ul>
+        [% INCLUDE partials/body/related.html %]
         <h2>Tags</h2>
         <div>
           <a href="#">#foo</a>
@@ -41,7 +34,6 @@
           <a href="#">#baz</a>
           <a href="#">#bazoo</a>
         </div>
-        [% END %]
       [% END %]
         <h2>Archive</h2>
         <ul>
