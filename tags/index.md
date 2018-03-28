@@ -9,6 +9,7 @@ virtual: 1
       [% q.clone(location => location
                  plocation => location
                  title => '#' _ tag
+                 tag => tag
                  start => 0) %]
     [% END %]
 [% ELSE %]
