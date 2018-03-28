@@ -4,6 +4,7 @@
     <div id="main">
       <article>
         <div class="article-head">
+        [% INCLUDE partials/body/taglist.html %]
           <h1 class="title">[% asset.title %]</h1>
           [% IF asset.subtitle %]<h2 class="subtitle">[% asset.subtitle | html %]</a></h2>[% END %]
           </p>
@@ -21,7 +22,6 @@
         </div>
   
         <div class="content">[% asset.content %]</div>
-
       </article>
       [% INCLUDE partials/body/nav.html %]
       [% INCLUDE partials/body/aside.html %]

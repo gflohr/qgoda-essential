@@ -1,0 +1,9 @@
+[% IF asset.tags %]
+  <div class="taglist">
+  Tags:
+  [% FOREACH tag IN asset.tags %]
+    [% slug = tag.slugify() %]
+    <a href="/tags/[% slug %]/">#[% tag | html %]</a>
+  [% END %]
+  </div>
+[% END %]

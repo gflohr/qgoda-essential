@@ -2,6 +2,7 @@
 title: General Information
 name: general-information
 order: a
+tags: [ General ]
 ---
 This theme contains examples for most functionality of Qgoda and it also shows
 some best practices for organizing a Qgoda powered site.  It does *not* contain

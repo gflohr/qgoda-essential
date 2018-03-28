@@ -40,6 +40,7 @@ defaults:
       organization: cantanea EOOD
   - files:
       - index.md
+      - index-*.md
     values:
       type: page
       priority: -1

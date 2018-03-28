@@ -235,6 +235,13 @@ footer {
     font-weight: bold;
 }
 
+.article-head .taglist {
+    color: #cccccc;
+    font-size: smaller;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
 @media all and (max-width: 640px) {
     #main {
         flex-direction: column;
