@@ -1,7 +1,12 @@
 [% USE q = Qgoda %]
-[% posts = q.listPosts().sortBy('order') %]
+[% posts = q.listPosts(filters).sortBy('order') %]
 [% IF posts.size %]
-  [% p = q.paginate(start = asset.start, total = posts.size, per_page = 3) %]
+  [% IF !per_page %][% per_page = 3 %][% END %]
+  [% start = asset.start || 0 %]
+  [% asset.start = 0 # Important for recursions! Cloned documents will 
+                     # always have an explicit value passed in the call
+                     # to clone() %]
+  [% p = q.paginate(start = start, total = posts.size, per_page = per_page) %]
   <ul class="listing">
   [% FOREACH post IN posts.splice(p.start, p.per_page) %]
     <li>

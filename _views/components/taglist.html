@@ -1,0 +1,8 @@
+[% USE q = Qgoda %]
+<h2 class="aside-headline">Related</h2>
+[% tags = q.taxonomyValues('tags') %]
+<div class="taglist">
+[% FOREACH tag IN tags %]
+<a href="/tags/[% tag.slugify %]/">#[% tag %]</a>
+[% END %]
+</div>
