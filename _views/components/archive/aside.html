@@ -1,0 +1,12 @@
+[% USE q = Qgoda %]
+<h2 class="aside-headline">Archive</h2>
+<ul>
+  [% FOREACH year IN q.listPosts().vmap('date.year').unique().nsort().reverse() %]
+  <li>[% year %]
+    <ul>
+      [% FOREACH month IN q.llistPosts('date.year' = year).vmap('date.month').unique().sort().reverse() %]
+          <li><a href="/archive/[% year %]/[% month %]/">[% year %]/[% month %]</a></li>
+      [% END %]
+    </ul>
+  [% END %]
+</ul>
