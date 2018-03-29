@@ -1,7 +1,7 @@
 ---
 title: Installation
 name: installation
-order: b 
+date: 2018-04-03
 tags: [ General, Installation ]
 ---
 [% USE q = Qgoda %]

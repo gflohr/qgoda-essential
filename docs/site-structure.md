@@ -1,7 +1,7 @@
 ---
 title: Site Structure
 name: site-structure
-order: f
+date: 2018-03-13
 tags: [ General, Files and Directories ]
 ---
 [% USE q = Qgoda %]

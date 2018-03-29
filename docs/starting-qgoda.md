@@ -1,7 +1,7 @@
 ---
 title: Starting Qgoda
 name: starting-qgoda
-order: c
+date: 2018-03-31
 tags: [ General, Installation ]
 ---
 [% USE q = Qgoda %]

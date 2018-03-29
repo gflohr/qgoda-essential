@@ -1,7 +1,7 @@
 ---
 title: Templates
 name: templates
-order: k
+order: 2018-03-01
 tags: [ General, Templates ]
 ---
 [% USE q = Qgoda %]

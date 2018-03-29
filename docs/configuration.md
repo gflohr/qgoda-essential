@@ -1,7 +1,7 @@
 ---
 title: Configuration
 name: configuration
-order: e
+date: 2018-03-20
 tags: [ General, Configuration ]
 ---
 [% USE q = Qgoda %]
