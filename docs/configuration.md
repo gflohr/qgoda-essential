@@ -32,6 +32,18 @@ defaults:
 
 This sets default values for the variables `author`, `lingua`, `organization`, and `type` for all files ending in `.md` (that are all markdown documents).
 
+The variable `lingua` is universally used in Qgoda for holding a standard HTTP language identifier like `en-US` or `de-DE` or the like as set forth in [RFC5646](http://www.rfc-editor.org/rfc/rfc5646.txt).  Although this theme is a single-language theme, it is strongly recommended to set the language of the content contained.  This is not only good practice:
+[% TAGS [@ @] %]
+
+```html
+<!doctype html>
+<html lang="[% asset.lingua %]">
+...
+```
+
+[@ TAGS [% %] @]
+It also simplifies a future migration to a multi-language site, and you never know, do you?
+
 The next rule for `index.md` and `index-*.md` overrides the value `type` for these documents, and also sets the rendering priority for these documents.  See [% q.anchor(name = 'listings') %] for an explanation of the variable `priority`.
 
 You can find a detailed explanation for setting document defaults in `_config.yaml` at http://www.qgoda.net/en/docs/defaults.html.

@@ -9,7 +9,7 @@
   
           [% IF 'post' == asset.type %]
           <div class="article-subhead">
-            <span class="date">[% q.strftime('%B, %d %Y', asset.date) %]</span>
+            <span class="date">[% q.strftime('%B %d, %Y', asset.date) %]</span>
             &nbsp;
             <span class="author">
             [% asset.author %]
