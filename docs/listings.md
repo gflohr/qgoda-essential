@@ -100,3 +100,4 @@ blab
 
 The form `[%- ... -%]` will eat up all adjacent whitespace and fix the problem.
 
+You can continue with [@ q.anchor(name = 'archives') @] from here.

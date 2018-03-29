@@ -1,4 +1,5 @@
 ---
+virtual: 1
 ---
 [% USE q = Qgoda %]
 
