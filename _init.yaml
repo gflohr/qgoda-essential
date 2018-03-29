@@ -12,8 +12,8 @@ _tasks:
 # This gets merged into package.json.
 _package:
   scripts:
-    prestart: 'npm install'
-    start: 'browser-sync start --server _site --files _timestamp'
+    preserver: 'npm install'
+    server: 'browser-sync start --server _site --files _timestamp'
     test: 'echo "Error: no test specified"; exit 1'
 
 # Dev dependencies.
@@ -29,7 +29,7 @@ exclude:
   - /yarn.lock
   - /node_modules
 helpers:
-  browser-sync: npm start
+  browser-sync: npm run server 
 # We need fenced code blocks.
 processors:
   chains:

@@ -24,3 +24,7 @@ need here:
 - page listings
 - pagination
 - smart inclusion of JavaScript and CSS
+
+The documentation found in this project is *not* meant to be exhaustive documentation for Qgoda (see the [Qgoda web site](http://www.qgoda.net/en/docs/) for comprehensive documentation) but documents this particular theme only.  The information found here should enable you to modify the site layout to your particular needs and help you understand the general design principles behind Qgoda themes.
+
+Note that the documentation contained here sometimes links to the actual documenation at http://www.qgoda.net/en/docs.  At the time of this writing, the product documentation is still incomplete, and some of these links may be broken!

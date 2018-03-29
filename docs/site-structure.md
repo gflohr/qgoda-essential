@@ -49,6 +49,10 @@ The view template to use for a certain document is determined by the variable `v
 
 Normally, you will modularize your view templates into snippets or compoents.
 
+### `docs/`
+
+The directory `docs` contains the documentation that you are currently reading.  You can safely delete the entire directory.
+
 ## Other Files and Directories
 
 All other files and directories contain content and are copied to the `_site` directory, possibly after running them through a processor chain.
