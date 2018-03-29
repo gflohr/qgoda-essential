@@ -35,4 +35,4 @@ The first argument is the threshhold for the relationship value.  That avoids th
 
 Following the threshold is the now well known list of additional filters.  The resulting list can then be cut to a maximum size (variable `count`).  The rest should be self-explanatory.
 
-Now that all relevant features of this theme are covered, you may want to move on to [@ q.anchor(name = 'node.js') @] if you want to learn how to add modern web development features to the theme.
+Now that all relevant features of this theme are covered, you may want to move on to [@ q.anchor(name = 'nodejs') @] if you want to learn how to add modern web development features to the theme.

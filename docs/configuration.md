@@ -84,7 +84,7 @@ helpers:
   webpack: npm start
   browser-sync: npm run server
 ```
-See [% q.anchor(name = 'node.js') %] for more information.
+See [% q.anchor(name = 'nodejs') %] for more information.
 
 ## Template Globals
 

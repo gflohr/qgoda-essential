@@ -1,10 +1,10 @@
 ---
 title: NodeJS
-name: node.js
+name: nodejs
 date: 2018-01-01
 tags: [ General, NodeJS, JavaScript, CSS, Helpers ]
 ---
-This theme has focused on Qgoda features, and how to use them for generating web sites with very flexible structures.  For serious web development, you will want to improve the way JavaScript, CSS, and other resource are processed and handled.  Fortunately, it is very simple to integrate all kinds of tools from the [node.js](https://nodejs.org/en/) eco system into your Qgoda site.
+This theme has focused on Qgoda features, and how to use them for generating web sites with very flexible structures.  For serious web development, you will want to improve the way JavaScript, CSS, and other resource are processed and handled.  Fortunately, it is very simple to integrate all kinds of tools from the [nodejs](https://nodejs.org/en/) eco system into your Qgoda site.
 
 The first step should be editing `package.json`.  It currently contains only one script entry "server" for starting the development web server [Browsersync](https://browsersync.io/).  You should add the script(s) for your development environment:
 
