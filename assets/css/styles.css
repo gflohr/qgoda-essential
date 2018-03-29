@@ -309,5 +309,14 @@ ul.toclevel-1 {
         margin-left: 2rem;
         margin-right: 1rem;
     }
+
+    aside {
+        text-align: left;
+    }
+
+    aside .related-list {
+        padding-left: 0;
+        list-style-type: none;
+    }
 }
 
