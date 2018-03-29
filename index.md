@@ -10,6 +10,6 @@ developers that want to have full control over the build process.
 
 See [https://github.com/[% config.theme_repo %]](https://github.com/[% config.theme_repo %])
 for instructions on how to use this theme. The pages below give you a detailed
-insight into the internals of the theme.
+insight into the internals of the theme.  The default site serves its own documentation.
 
 [% INCLUDE components/listing.html %]
