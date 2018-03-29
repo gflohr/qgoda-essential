@@ -237,11 +237,23 @@ footer {
     font-weight: bold;
 }
 
-.article-head .taglist {
-    color: #cccccc;
+article hr {
+    color: #888888;
+}
+
+article .taglist {
+    color: #888888;
     font-size: smaller;
     font-style: italic;
     margin-bottom: 0.5rem;
+}
+
+code {
+    display: block;
+    white-space: pre;
+    font-family: Courier, monospace;
+    background-color: #dddddd;
+    padding-left: 1rem;
 }
 
 @media all and (max-width: 640px) {
