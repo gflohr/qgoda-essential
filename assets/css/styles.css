@@ -292,3 +292,22 @@ ul.toclevel-1 {
     }
 }
 
+@media all and (max-width: 1024px) {
+    #main > article {
+        flex: 3 1 70%;
+        margin-left: 2rem;
+    }
+    
+    #main > nav {
+        flex: 1 6 0%;
+        order: 1;
+    }
+    
+    #main > aside {
+        flex: 1 6 30%;
+        order: 3;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+}
+
