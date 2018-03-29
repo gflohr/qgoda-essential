@@ -30,6 +30,13 @@ exclude:
   - /node_modules
 helpers:
   browser-sync: npm start
+# We need fenced code blocks.
+processors:
+  chains:
+    markdown:
+      modules:
+      - TT2
+      - Hoedown
 defaults:
   - files:
       - "*.md"
