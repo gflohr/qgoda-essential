@@ -149,7 +149,7 @@ ul.listing li .listing-body {
 }
 
 .date::before {
-    content: "\1F565";
+    content: "\1F565\a0";
     font-style: normal;
 }
 

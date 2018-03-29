@@ -6,7 +6,6 @@
         <div class="article-head">
           <h1 class="title">[% asset.title %]</h1>
           [% IF asset.subtitle %]<h2 class="subtitle">[% asset.subtitle | html %]</a></h2>[% END %]
-          </p>
   
           [% IF 'post' == asset.type %]
           <div class="article-subhead">
@@ -21,7 +20,6 @@
         </div>
   
         <div class="content"><qgoda-content>[% asset.content %]</qgoda-content></div>
-        <hr />
         [% INCLUDE partials/body/taglist.html %]
       </article>
       [% INCLUDE partials/body/nav.html %]
