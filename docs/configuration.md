@@ -74,6 +74,20 @@ helpers:
 ```
 See [% q.anchor(name = 'node.js') %] for more information.
 
+## Template Globals
+
+This section:
+
+```yaml
+global:
+  scripts:
+    - /assets/js/site.js
+  styles:
+    - /assets/css/styles.css
+```
+
+Please refer to [% q.anchor(name = 'template-setup') %] for more information.
+
 ## Other Configuration Variables
 
 See http://www.qgoda.net/en/docs/configuration-variables/ for a complete list of configuration variables.

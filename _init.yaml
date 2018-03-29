@@ -54,4 +54,6 @@ defaults:
 global:
   styles: ['/assets/css/styles.css']
   scripts: ['/assets/js/site.js']
+# This is only needed for the theme documentation.  You can safely delete it,
+# if you don't need the theme docs any more.
 theme_repo: gflohr/qgoda-essential
