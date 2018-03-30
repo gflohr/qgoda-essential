@@ -17,7 +17,7 @@ Listings, in general, take one of the following forms in Qgoda:
 [% FOREACH post IN q.llistPosts.nsortBy('date').reverse() %]
   <h3>[% post.title | html %]</h3>
   ...
-[% %]
+[% END %]
 ```
 
 This will list all posts in the site that have the same language, and sort them by date in descending order.  By the way, `llistPosts()` is not a typo but the equivalent of this:
