@@ -12,7 +12,7 @@ Listings of posts are explained in great detail on the [Qgoda website](http://ww
 
 Listings, in general, take one of the following forms in Qgoda:
 
-```html
+```tt2
 [% USE q = Qgoda %]
 [% FOREACH post IN q.llistPosts.nsortBy('date').reverse() %]
   <h3>[% post.title | html %]</h3>
@@ -22,7 +22,7 @@ Listings, in general, take one of the following forms in Qgoda:
 
 This will list all posts in the site that have the same language, and sort them by date in descending order.  By the way, `llistPosts()` is not a typo but the equivalent of this:
 
-```
+```tt2
 [% q.listPosts(lingua = asset.lingua) %]
 ```
 
@@ -30,7 +30,7 @@ The leading "l" in `llistPosts` stands for `lingua`, and automatically adds a fi
 
 And the invocation of `listPosts` is actually a synonym for this:
 
-```
+```tt2
 [% q.list(lingua = asset.lingua type = 'post') %]
 ```
 
@@ -38,7 +38,7 @@ And the invocation of `listPosts` is actually a synonym for this:
 
 When you look into the source code of [`_views/components/listing.html`](https://github.com/gflohr/qgoda-essential/blob/master/_views/components/listing.html) you will probably find that this is not for the faint of heart.  It looks like it would be a good idea to parametrize the listing so that it can be reused for different types of listings.  This is easy:
 
-```
+```tt2
 [% posts = q.listPosts(filters).nsortBy('date').reverse() %]
 ```
 
@@ -46,7 +46,7 @@ Now the variable `filters` can contain arbitrary filters.  If you `INCLUDE` the 
 
 But you can also search for all posts from June 2015 like this:
 
-```
+```tt2
 [% INCLUDE components/listing.html
            date.year = 2015
            date.month = '06' %]
@@ -54,7 +54,7 @@ But you can also search for all posts from June 2015 like this:
 
 Or search for all posts for the tag 'CSS':
 
-```
+```tt2
 [% INCLUDE components/listing.html
            tags = ['icontains', 'CSS'] %]
 ```
@@ -63,7 +63,7 @@ Or search for all posts for the tag 'CSS':
 
 You will often distribute long listings over multiple pages.  This is called *pagination* and explained at http://www.qgoda.net/en/docs/pagination/.  The general principle is simple.  Instead of iterating directly ver the list, you feed the set of posts into the Qgoda plug-in function `paginate()`:
 
-```
+```tt2
 [% start = asset.start || 0 %]
 [% p = q.paginate(start = start, total = posts.size, per_page = 10) %]
 [% USE Dumper %]
@@ -76,7 +76,7 @@ But that is the trivial part of pagination.  We now must generate an unknown num
 
 The solution used by Qgoda is embarrassingly simple: Qgoda documents have the ability to *reproduce*.  You can create an exact clone of the document currently being rendered but you can (and must!) inject a little bit of mutated DNA:
 
-```
+```tt2
 [%- IF p.next_start -%]
   [%- q.clone(location = p.next_location start = p.next_start) -%]
 [%- END -%]
@@ -92,7 +92,7 @@ Listings will very often be generated as part of Markdown documents.  That offer
 
 In brief: Markdown will occasionally throw in `<p>` elements, where the template processor left whitespace behind.  With Template Toolkit you can avoid that by using the whitespace consuming form of tags:
 
-```
+```tt2
 [%- IF something -%]
 blab
 [%- END -%]

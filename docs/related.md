@@ -10,7 +10,7 @@ You can learn how Qgoda calculates which documents are related respectively simi
 
 See `_views/components/related.html`:
 
-```html
+```tt2
 [% USE q = Qgoda %]
 [% IF !threshold %][% threshold = 3 %][% END %]
 [% IF !count %][% count = 5 %][% END %]
@@ -27,7 +27,7 @@ See `_views/components/related.html`:
 
 The heart of it all is the call to `q.related()`:
 
-```
+```tt2
 [% docs = q.related(threshold, type = 'post').splice(0, count - 1) %]
 ```
 

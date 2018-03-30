@@ -37,7 +37,7 @@ It bears an amazing similarity with the code for [archives]([@ q.link(name = 'ar
 
 You can further restrict that by extracting only values from documents that have the same language and are of type posts (as an example):
 
-```
+```tt2
 [% tags = q.taxonomyValues('tags' type = 'post' lingua = asset.lingua )]
 ```
 

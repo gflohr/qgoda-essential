@@ -8,9 +8,13 @@ tags: [ Templates, Cache-Busting, CSS, JavaScript ]
 [% TAGS [@ @] %]
 Setting up some global logic that is available in all modules of the templates is usually a good idea.  You should always do that from the root of your template tree and use the `PROCESS` directive of the [Template Toolkit](http://www.http://www.template-toolkit.org/), and *not* `INCLUDE` for that.
 
+<qgoda-toc/>
+
+## Default Template
+
 The first line of the [default template]([@ q.link(name = 'templates') @]) looked like this:
 
-```
+```tt2
 [%- PROCESS functions/setup.tt -%]
 ...
 ```
@@ -21,7 +25,7 @@ In contrast to the `INCLUDE` directive, `PROCESS` includes the file with a conte
 
 The setup template that ships with this theme is really simple:
 
-```
+```tt2
 [%- global = config.global -%]
 ```
 
@@ -45,21 +49,21 @@ It is crucial that these arrays are not top-level variables but children of a to
 
 In [@ q.anchor(name = 'templates') @] we have already learned that it is wise to calculate the contents of the HTML `<body>` before that of the HTML `<head>`.  That pays out now.   You can do any of the following in your body view templates:
 
-```
+```tt2
 [% global.styles.push('/assets/css/carousel.css') %]
 ```
 
 Or even:
 
-```
-[% global.styles.push('<style>.important { font-weight: bold; }</style>')]
+```tt2
+[% global.styles.push('<style>.important { font-weight: bold; }</style>') %]
 ```
 
 You can, of course, also override the styles completely by assigning a new array to `global.styles`.
 
 Now look into `_views/partials/head.html`:
 
-```html
+```tt2
   <head>
     ...
     [% INCLUDE functions/scripts.tt %]
@@ -72,19 +76,19 @@ The template code [`functions/styles.tt`](https://github.com/gflohr/qgoda-essent
 
 This works in a very similar fashion to stylesheets:
 
-```
+```tt2
 [% global.scripts.push('/assets/js/carousel.js') %]
 ```
 
 Or even:
 
-```
-[% global.scripts.push('<script>const answer = 42;</script>')]
+```tt2
+[% global.scripts.push('<script>const answer = 42;</script>') %]
 ```
 
 In `_views/partials/body.html`, all JavaScript codes is included just before the closing body tag:
 
-```html
+```tt2
   <body>
     ...
     [% INCLUDE functions/scripts.tt %]
@@ -101,7 +105,7 @@ There is one gotcha! The view templates are used in the second pass of the conte
 
 There is a simple solution though.  Change `_views/functions/setup.tt` to read like this:
 
-```
+```tt2
 [%- global = config.global -%]
 [%- IF asset.scripts %][% global.scripts.push(assets.scripts) %][% END -%]
 [%- IF asset.styles %][% global.scripts.styles(assets.styles) %][% END -%]
@@ -109,7 +113,7 @@ There is a simple solution though.  Change `_views/functions/setup.tt` to read l
 
 Now you can do the following in your Markdown documents:
 
-```yaml
+```tt2
 ---
 ...
 scripts: /assets/js/carousel.js
@@ -132,7 +136,7 @@ The number after the question mark is the unix timestamp of the file in question
 
 You can use the same function anywhere yourself:
 
-```html
+```tt2
 [% USE q = Qgoda %]
 <img src="[% q.bust_cache('/assets/images/clock.svg') %]"
      alt="An analog clock">
