@@ -23,7 +23,7 @@
         &nbsp;
         <span class="author">
           [% post.author %]
-          [% IF post.organization %]- [% post.organization %][% END %]
+          [% IF post.organization %]- [% post.organization | html %][% END %]
         </span>
       </div>
     </li>
