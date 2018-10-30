@@ -38,8 +38,7 @@ processors:
       - TT2
       - Hoedown
 defaults:
-  - files:
-      - "*.md"
+  - files: "*.md"
     values:
       lingua: en-us
       type: post
