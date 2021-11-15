@@ -138,7 +138,7 @@ You can use the same function anywhere yourself:
 
 ```tt2
 [% USE q = Qgoda %]
-<img src="[% q.bust_cache('/assets/images/clock.svg') %]"
+<img src="[% q.bustCache('/assets/images/clock.svg') %]"
      alt="An analog clock">
 ```
 
